@@ -28,5 +28,15 @@ export class PositionsComponent implements OnInit {
       }
     })
   }
+  showThis(x){
+    let obj = document.getElementById('myid' + x)
+    for(let i = 0; i < this.relatedJobs.length; i++){
+      if(i == x){
+        obj.classList.add('show')
+      } else {
+        document.getElementById('myid' + i).classList.remove('show')
+      }
+    }
+  }
 
 }

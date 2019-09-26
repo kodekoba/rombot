@@ -15,7 +15,7 @@
                     <button class="dropdown-item" [routerLink]="['/']">Search for a job</button>
                     <button class="dropdown-item" [routerLink]="['/jobs']">List All Jobs</button>
                     <div class="dropdown-divider"></div>
-                    <button class="dropdown-item" href="#">About This Project</button>
+                    <button class="dropdown-item" [routerLink]="['/about']">About This Project</button>
                 </div>
             </div>       
         </div>
@@ -34,37 +34,7 @@
             <button class="btn btn-secondary go-back" [routerLink]="['/jobs']">Back to All Jobs</button>
         </div>
     </div>
-        
-    <!-- <div *ngIf="relatedJobs">
-        <div *ngFor="let x of relatedJobs let i = index" [attr.data-index]="i" class="job-style">
-            <div class="job-upper-content">
-                <div class="job-img">
-                    <img class="logos" src="{{x.company_logo}}" height="150px" />
-                </div>
-                <div class="job-title-location">
-                    <h2><a href="{{x.company_url}}">{{x.company}}</a></h2>
-                    <h4>{{x.title}} | {{x.type}}</h4>
-                    <h5>{{x.location}}</h5>
-                </div>
-            </div>
-            <div class="pos-f-t">
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-dark p-4">
-                        <h5 class="text-white h4">Job Description:</h5>
-                        <span class="text-muted">
-                            {{x.description}}
-                        </span>
-                    </div>
-                </div>
-                <nav class="navbar navbar-dark bg-info">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
-            </div>
-            <a href="{{x.url}}">Apply Now!</a>
-        </div>
-    </div> -->
+
     <div *ngIf="relatedJobs">
         <div *ngFor="let x of relatedJobs let i = index" [attr.data-index]="i" class="job-style">
             <div class="job-upper-content">
@@ -78,9 +48,9 @@
                 </div>
             </div>
             <div class="pos-f-t">
-                <div class="collapse" id="navbarToggleExternalContent">
+                <div id="myid{{i}}" class="collapse">
                     <div class="expand-content">
-                        <h5 class="text-white h4">Job Description:</h5>
+                        <h5 class="text-black h4">Job Description:</h5>
                         <span class="text-muted">
                             {{x.description}}
                         </span>
@@ -88,7 +58,7 @@
                 </div>
                 
                 <div class="more-apply-buttons">
-                    <button class="btn btn-info more-apply" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" >
+                    <button (click)="showThis(i)" id = "{{i}}" class="btn btn-info more-apply" type="button">
                         Learn More
                     </button>
     

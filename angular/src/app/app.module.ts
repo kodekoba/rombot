@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HttpService } from './http.service';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpService } from './http.service';
     AppComponent,
     ListComponent,
     PositionsComponent,
-    SearchComponent
+    SearchComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

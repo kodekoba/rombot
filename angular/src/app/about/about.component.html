@@ -13,25 +13,18 @@
                 </button>
                 <div class="dropdown-menu">
                     <button class="dropdown-item" [routerLink]="['/']">Search for a job</button>
-                    <button class="dropdown-item disabled" [routerLink]="['/jobs']">List All Jobs</button>
+                    <button class="dropdown-item" [routerLink]="['/jobs']">List All Jobs</button>
                     <div class="dropdown-divider"></div>
-                    <button class="dropdown-item" [routerLink]="['/about']">About This Project</button>
+                    <button class="dropdown-item disabled" [routerLink]="['/about']">About This Project</button>
                 </div>
             </div>       
         </div>
     </nav>
 </header>
-
-<div *ngIf="allJobs">
-    <div class="container padding-adjust">
-        <div *ngFor="let x of allJobs; let i = index" [attr.data-index]="i" (click)="submitLocation(x,i)" class="card-display">
-            <div class="card-columns">
-                <div class="card-info">
-                    <h3 class="job-title">{{x.title}}</h3>
-                    <h5 class="job-location">{{x.location}}</h5>
-                    <!-- <button (click)="submitLocation(x,i)" class="btn btn-info">Discover Jobs</button> -->
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <div class="jumbotron jumbotron-style">
+        <h1 class="display-4">About</h1>
+        <hr class="my-4">
+        <p class="lead">This project was created by Adriel Ordonez as an assessment for his qualifications for the position of Full-Stack Engineer at RomBot. If you haven't yet realized, there is an easter egg on the logo :)</p>
     </div>
 </div>

@@ -38,7 +38,7 @@ def all_jobs(request):
 def related_jobs(request,id):
     index = int(id[32:])
     title_id = id[:32]
-    job = Job.objects.filter(title_id=title_id)
+    job = Job.objects.all()
     if len(job) > 1:
         job = job[index]
     else:

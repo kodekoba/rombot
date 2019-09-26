@@ -15,14 +15,14 @@
                     <button class="dropdown-item disabled" [routerLink]="['/']">Search for a job</button>
                     <button class="dropdown-item" [routerLink]="['/jobs']">List All Jobs</button>
                     <div class="dropdown-divider"></div>
-                    <button class="dropdown-item" href="#">About This Project</button>
+                    <button class="dropdown-item" [routerLink]="['/about']">About This Project</button>
                 </div>
             </div>       
         </div>
     </nav>
 </header>
+
 <div class="container">
-    <!-- <a [routerLink]="['/jobs']">List All Jobs</a> -->
     <div class="jumbotron jumbotron-style">
         <h1 class="display-4">Find A Job</h1>
         <p class="lead">Complete the form to search for jobs by job title and location (powered by Open Skills API and GitHub Jobs API). </p>
