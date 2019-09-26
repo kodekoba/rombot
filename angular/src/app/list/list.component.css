@@ -1,0 +1,25 @@
+.padding-adjust{
+    padding: 0;
+}
+
+.card-display{
+    padding: 15px 20px;
+    width: 50%;
+    display:inline-block;
+}
+
+.card-columns{
+    display: inline;
+}
+
+.card-info{
+    border: 5px solid #13293D;
+    box-shadow: 3px 4px #545B62;
+    vertical-align: top;
+    padding: 35px 15px;
+    text-align: center;
+}
+
+.job-location{
+    color: #545B62;
+}

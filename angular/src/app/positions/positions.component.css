@@ -1,0 +1,55 @@
+.job-style{
+    border: 3px solid #13293D;
+    margin: 10px;
+    padding: 5px;
+}
+
+.job-upper-content{
+    padding: 15px 0;
+    vertical-align: middle;
+}
+
+.job-title-location{
+    max-width: 50%;
+    margin: 10px 0 0 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.job-img{
+    vertical-align: middle;
+    width: 400px;
+    display: inline-block;
+}
+
+img.logos{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+button.go-back{
+    padding: 10px 30px;
+    margin-right: 20px;
+}
+
+.expand-content{
+    padding: 25px 50px;
+}
+
+.more-apply{
+    padding: 10px 30px;
+    margin-right: 20px;
+}
+
+.none{
+    display: none;
+}
+
+.more-apply-buttons{
+    width: 60%;
+    display: block;
+    margin-left: 40%;
+    margin-right: auto;
+}

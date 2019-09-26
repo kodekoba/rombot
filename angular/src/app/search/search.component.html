@@ -1,0 +1,47 @@
+<header>    
+    <nav class="navbar navbar-light header-bg">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="/assets/img/mag.png" width="100" height="100" class="jf-image d-inline-block align-middle" alt="">
+                <span class="title">
+                    jobFinder
+                </span>  
+            </div>     
+            <div class="btn-group nav-button">
+                <button type="button" class="btn btn-secondary btn-lg dropdown-toggle edit-nav-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Explore
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item disabled" [routerLink]="['/']">Search for a job</button>
+                    <button class="dropdown-item" [routerLink]="['/jobs']">List All Jobs</button>
+                    <div class="dropdown-divider"></div>
+                    <button class="dropdown-item" href="#">About This Project</button>
+                </div>
+            </div>       
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <!-- <a [routerLink]="['/jobs']">List All Jobs</a> -->
+    <div class="jumbotron jumbotron-style">
+        <h1 class="display-4">Find A Job</h1>
+        <p class="lead">Complete the form to search for jobs by job title and location (powered by Open Skills API and GitHub Jobs API). </p>
+        <hr class="my-4">
+
+        <form>
+            <div class="form-group row">
+                <label for="inputTitle" class="col-sm-2 col-form-label">Job Title</label>
+                <div class="col-sm-10">
+                    <input name="job.title" [(ngModel)]="job.title" type="text" class="form-control" id="inputTitle" placeholder="Insert Job Title ...">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputLocation" class="col-sm-2 col-form-label">Location</label>
+                <div class="col-sm-10">
+                    <input name="job.location" [(ngModel)]="job.location" type="text" class="form-control" id="inputLocation" placeholder="Insert Location ...">
+                </div>
+            </div>
+            <button (click)="submitForm()" class="btn btn-secondary edit-nav-btn search-button">Search</button>
+        </form>
+    </div>
+</div>

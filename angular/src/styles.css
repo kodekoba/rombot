@@ -1,0 +1,51 @@
+html, body{
+    background-color: #E8F1F2;
+}
+
+.jf-image {
+    min-width: 100px;
+    transition-duration: 1000ms;
+    transition-property: width, height, transform;
+}
+
+.jf-image:hover{
+    width: 200px;
+    height: 200px;
+    transform: rotateY(360deg)
+}
+
+.title{
+    margin-left: 10px;
+    font-weight: bold;
+    color: #E8F1F2;
+    font-size: 56px;
+    vertical-align: middle;
+}
+
+.nav-button{
+    margin-left: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.edit-nav-btn{
+    padding: 10px 40px;
+}
+
+.dropdown-divider{
+    border-top: 2px solid lightgrey;
+}
+
+.header-bg{
+    background-color: #006494;
+}
+
+.jumbotron-style{
+    margin-top: 10px;
+}
+
+.search-button{
+    margin-top: 25px;
+    margin-left: auto;
+    display: block;
+}

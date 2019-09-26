@@ -1,0 +1,37 @@
+<header>    
+    <nav class="navbar navbar-light header-bg">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="/assets/img/mag.png" width="100" height="100" class="jf-image d-inline-block align-middle" alt="">
+                <span class="title">
+                    jobFinder
+                </span>  
+            </div>     
+            <div class="btn-group nav-button">
+                <button type="button" class="btn btn-secondary btn-lg dropdown-toggle edit-nav-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Explore
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item" [routerLink]="['/']">Search for a job</button>
+                    <button class="dropdown-item disabled" [routerLink]="['/jobs']">List All Jobs</button>
+                    <div class="dropdown-divider"></div>
+                    <button class="dropdown-item" href="#">About This Project</button>
+                </div>
+            </div>       
+        </div>
+    </nav>
+</header>
+
+<div *ngIf="allJobs">
+    <div class="container padding-adjust">
+        <div *ngFor="let x of allJobs; let i = index" [attr.data-index]="i" (click)="submitLocation(x,i)" class="card-display">
+            <div class="card-columns">
+                <div class="card-info">
+                    <h3 class="job-title">{{x.title}}</h3>
+                    <h5 class="job-location">{{x.location}}</h5>
+                    <!-- <button (click)="submitLocation(x,i)" class="btn btn-info">Discover Jobs</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
